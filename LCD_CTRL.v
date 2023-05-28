@@ -23,6 +23,7 @@ module LCD_CTRL(clk,
     output reg busy;
     output reg done;
 
+	
 parameter [5:0] IDLE = 0,
                 READ = 1,
                 CMD = 2,
