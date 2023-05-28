@@ -39,7 +39,6 @@ wire [5:0] RU ; // RIGHT up point
 wire [5:0] LD ; // LEDT DOWN POINT
 wire [5:0] RD ; // RIGHT DOWN POINT
 
-	
 //flagging at Right UP side
 // point assignment
 // hint '+' operator's priority is greater than '>> or <<'
