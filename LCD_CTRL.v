@@ -39,7 +39,7 @@ wire [5:0] RU ; // RIGHT up point
 wire [5:0] LD ; // LEDT DOWN POINT
 wire [5:0] RD ; // RIGHT DOWN POINT
 
-
+	
 //flagging at Right UP side
 // point assignment
 // hint '+' operator's priority is greater than '>> or <<'
@@ -77,16 +77,6 @@ assign min = (min_temp1 <= min_temp2)? min_temp1: min_temp2;
 // for delay one cycle
 //reg for state[WRITE]
 reg [5:0] cnt_output;
-/*
-reg [5:0] delay_1clk;
-
-always@(posedge clk)begin
-    delay_1clk <= cnt_output;
-end
-*/
-
-
-
 
 // current state logic
 always@(posedge clk or posedge reset)begin
@@ -96,8 +86,6 @@ always@(posedge clk or posedge reset)begin
     end
     else cs <= ns;
 end
-
-
 
 //next state logic
 always@(*)begin
@@ -226,7 +214,6 @@ always@(posedge clk)begin
                 IRAM_D <= img[cnt_output];
                 cnt_output <= cnt_output + 1'b1;
                 end
-                
             end
             cs[DONE]:begin
                 busy <= 1'b0;
